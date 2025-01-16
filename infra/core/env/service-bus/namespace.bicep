@@ -48,9 +48,7 @@ module serviceBusResource 'br/SharedDefraRegistry:service-bus.namespace:0.5.16' 
     lock: resourceLockEnabled ? {
       kind: 'CanNotDelete'
     } : null
-    networkRuleSets: {
-      publicNetworkAccess: 'Disabled'
-    }
+    publicNetworkAccess: 'Disabled'
     privateEndpoints: [
       {
         name: serviceBus.namespacePrivateEndpointName
